@@ -6,3 +6,4 @@ A deep learning project that helps predict when and how stocks in certain indust
 3. Paddle-Paddle
 4. Deep learning
 5. Pandas
+6. PRAW
