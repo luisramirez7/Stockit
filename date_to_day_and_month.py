@@ -9,8 +9,8 @@ def isodateConverter(pandasArray, columnName):
 	a = dates[columnName]
 	new_column = []
 
-	for pussy in a: 
-		nicedate = pussy.split('-')
+	for poorlyformattedDates in a: 
+		nicedate = poorlyformattedDates.split('-')
 		year = nicedate[0]
 		month = nicedate[1]
 		day = nicedate[2]
