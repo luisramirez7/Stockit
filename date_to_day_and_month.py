@@ -3,10 +3,9 @@ import os
 import datetime as dt
 
 import pandas as pd
-dates = pd.read_csv('prices.csv', usecols=[1,1])
-thePandaArray = dates['date']
-def isodateConverter(pandasArray, columnName):
-	a = dates[columnName]
+
+def isodateConverter(pandasArray, columnNumber):
+	a = pandasArray
 	new_column = []
 
 	for poorlyformattedDates in a: 
@@ -20,6 +19,5 @@ def isodateConverter(pandasArray, columnName):
 		numberedWeekday = dt.date(yearInt,monthInt,dayInt).isoweekday()
 		new_column.append(numberedWeekday)
 
-	dates["numbered_weekday"] = new_column
-
-isodateConverter(thePandaArray, 'date')
+	# pandasArray["numbered_weekday"] = new_column
+	return new_column
