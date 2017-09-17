@@ -1,6 +1,8 @@
 from mergeCsvOnSymbol import *
 from date_to_day_and_month import *
 from calculateChangeInPrice import *
+from sentiment import *
+import pandas as pd
 import os
 import tarfile
 
@@ -28,6 +30,9 @@ def final_data(folderdirectory):
 		date_add = isodateConverter(dateInputForLooE, 0)
 		output["weekday"] = date_add
 		final_data_clean = changeInPrice(output)
+		#######f
+		sentimentData = sentiment('redditposts.txt')
+		final_data_clean = pd.merge(final_data_clean, sentimentData, on="data", how="inner")
 		print(final_data_clean)
-
+	return(final_data_clean)	
 final_data(superempty)
