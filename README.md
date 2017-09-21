@@ -3,7 +3,7 @@ A deep learning project that helps predict when and how stocks in certain indust
 
 1. Docker - Build ship run 
 2. Py-stoc - Some dudes data about stocks (https://github.com/eliangcs/pystock-data)
-3. Paddle-Paddle - Baidu Research Deep Learning Platform
+3. Paddle-Paddle - Baidu Research Deep Learning Platform (https://github.com/PaddlePaddle/Paddle)
 4. Deep learning
 5. Pandas - python library
 6. Numpy - python library 
