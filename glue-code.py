@@ -30,7 +30,6 @@ def final_data(folderdirectory):
 		date_add = isodateConverter(dateInputForLooE, 0)
 		output["weekday"] = date_add
 		final_data_clean = changeInPrice(output)
-		#######f
 		sentimentData = sentiment('redditposts.txt')
 		final_data_clean = pd.merge(final_data_clean, sentimentData, on="data", how="inner")
 		print(final_data_clean)
